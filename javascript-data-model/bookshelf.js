@@ -17,7 +17,6 @@ const bookshelf = [
     author: 'Phil Sturgeon & Laura Bohill',
   },
 ];
-
 console.log('author of the second book in bookshelf:', bookshelf[1].author);
 console.log('ISBN of the first book in bookshelf:', bookshelf[0].isbn);
 console.log('title of the third book in the bookshelf:', bookshelf[2].title);
