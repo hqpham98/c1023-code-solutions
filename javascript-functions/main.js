@@ -5,7 +5,7 @@ function convertMinutesToSeconds(minutes) {
 console.log('value of convertMinutesToSeconds(5):', convertMinutesToSeconds(5));
 
 function greet(name) {
-  return 'Hey,', name;
+  return 'Hey, ' + name;
 }
 
 console.log('value of greet("Beavis"):', greet('Beavis'));
