@@ -23,12 +23,16 @@ const library = [
     title: 'BookB',
     author: 'AuthorB',
   },
+  {
+    title: 'BookC',
+    author: 'AuthorC',
+  },
 ];
 
 const lastBook = library.pop();
 console.log('value of lastBook:', lastBook);
 
-const firstBook = library.unshift();
+const firstBook = library.shift();
 console.log('value of firstBook:', firstBook);
 
 const js = {
@@ -49,7 +53,7 @@ console.log('value of library:', library);
 const fullName = 'Henry Pham';
 const firstAndLastName = fullName.split(' ');
 
-console.log('value of firtsAndLastName:', firstAndLastName);
+console.log('value of firstAndLastName:', firstAndLastName);
 
 const firstName = firstAndLastName[0];
 const sayMyName = firstName.toUpperCase();
