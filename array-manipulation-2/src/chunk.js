@@ -16,8 +16,6 @@ function chunk(array, size) {
     result.push([]);
   }
 
-  console.log('result length2', result.length);
-
   let resultIndex = 0;
   let innerArraySize = 0;
 
@@ -36,7 +34,5 @@ function chunk(array, size) {
   }
 
   // return result with evenly divided array
-  console.log('input array:', array);
-  console.log('result array:', result);
   return result;
 }
