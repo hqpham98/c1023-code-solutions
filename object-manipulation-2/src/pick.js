@@ -13,3 +13,18 @@ function pick(source, keys) {
   }
   return result;
 }
+
+/* Instructor solution
+
+function pick(source, keys) {
+  const picked = {};
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    if (typeof source[key] !== 'undefined') {
+      picked[key] = source[key];
+    }
+  }
+  return picked;
+}
+
+*/

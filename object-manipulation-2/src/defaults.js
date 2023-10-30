@@ -1,9 +1,6 @@
 /* exported defaults */
 
 function defaults(target, source) {
-  console.log('beginning');
-  console.log('target:', target);
-  console.log('source:', source);
   for (const s in source) {
     // keep track if key found in target already
     let containsSourceKey = false;
@@ -29,8 +26,14 @@ function defaults(target, source) {
     // reset boolean after every source key
     containsSourceKey = false;
   }
-
-  console.log('ending');
-  console.log('target:', target);
-  console.log('source:', source);
 }
+
+/* Instructor Solution
+function defaults(target, source) {
+  for (const key in source) {
+    if (typeof target[key] === 'undefined') {
+      target[key] = source[key];
+    }
+  }
+}
+*/
