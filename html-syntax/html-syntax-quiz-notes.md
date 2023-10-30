@@ -6,9 +6,13 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - Give five examples of HTML element types.
 
+<html>, <body>, <img>, <head>, <p>
+
 - What is the purpose of HTML attributes?
+  Extra information for the element that won't appear in the content.
 
 - Give an example of an HTML entity (escape character).
+  &reg;
 
 ## Notes
 
