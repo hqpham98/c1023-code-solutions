@@ -40,66 +40,31 @@ function titleCase(string) {
         currentWord.charAt(hyphenIndex + 1).toUpperCase() +
         currentWord.substring(hyphenIndex + 2).toLowerCase();
       wordArray[i] = firstHalf + '-' + secondHalf;
-      if (containsColon) {
-        wordArray[i] += ':';
-        wordAfterColon = true;
-      } else {
-        wordAfterColon = false;
-      }
-      continue;
     }
 
     // Special case - API
-    if (currentWord.toLowerCase() === 'api') {
-      // add colon if ended in colon
-      if (containsColon) {
-        wordArray[i] = 'API:';
-        wordAfterColon = true;
-      } else {
-        wordArray[i] = 'API';
-        wordAfterColon = false;
-      }
-      continue;
+    else if (currentWord.toLowerCase() === 'api') {
+      wordArray[i] = 'API';
     }
     // Special case - JavaScript
-    if (currentWord.toLowerCase() === 'javascript') {
-      // add colon if ended in colon
-      if (containsColon) {
-        wordArray[i] = 'JavaScript:';
-        wordAfterColon = true;
-      } else {
-        wordArray[i] = 'JavaScript';
-        wordAfterColon = false;
-      }
-      continue;
+    else if (currentWord.toLowerCase() === 'javascript') {
+      wordArray[i] = 'JavaScript';
     }
     // Capitalize any word not in minor word
-    if (!minorWords.includes(currentWord.toLowerCase())) {
+    else if (!minorWords.includes(currentWord.toLowerCase())) {
       wordArray[i] =
         currentWord.charAt(0).toUpperCase() +
         currentWord.substring(1).toLowerCase();
-      if (containsColon) {
-        wordArray[i] += ':';
-        wordAfterColon = true;
-      } else {
-        wordAfterColon = false;
-      }
-      continue;
     }
 
     // Capitalize the first word
-    if (i === 0) {
+    else if (i === 0) {
       wordArray[i] =
         wordArray[0].charAt(0).toUpperCase() +
         currentWord.substring(1).toLowerCase();
-      if (containsColon) {
-        wordAfterColon = true;
-        wordArray[i] += ':';
-      }
-      continue;
     }
     // Capitalize if current word is after a colon
-    if (wordAfterColon) {
+    else if (wordAfterColon) {
       wordArray[i] =
         wordArray[i].charAt(0).toUpperCase() +
         wordArray[i].substring(1).toLowerCase();
@@ -108,6 +73,7 @@ function titleCase(string) {
     }
 
     if (containsColon) {
+      wordArray[i] += ':';
       wordAfterColon = true;
     } else {
       wordAfterColon = false;
