@@ -5,10 +5,12 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is the difference between an ordered list and an unordered list in HTML?
-  Ordered list are numbered. Unordered lists are bulleted.
+
+Ordered list are numbered. Unordered lists are bulleted.
 
 - Is an HTML list a block element or an inline element?
-  Block element.
+
+Block element.
 
 ## Notes
 
