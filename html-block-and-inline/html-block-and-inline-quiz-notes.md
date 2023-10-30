@@ -9,7 +9,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How do inline elements affect the document flow?
   They do not start on a new lne and take up only as much width as necessary.
 - What are the default width and height of a block-level element?
-  THe full width of the page and height of the content.
+  The full width of the page and height of the content.
 - What are the default width and height of an inline element?
   The width and height of the content.
 
