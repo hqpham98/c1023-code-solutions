@@ -17,6 +17,8 @@ select {
   border-color: #a6aaa9;
   background-color: #f3f3f3;
   display: block;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 1rem;
 }
 
 h2 {
@@ -29,9 +31,6 @@ h2 {
 
 .question,
 .button {
-  /* border-color: black;
-  border-style: solid;
-  border-width: 1px; */
   margin-bottom: 1rem;
   max-width: 50%;
   margin-left: 25%;
