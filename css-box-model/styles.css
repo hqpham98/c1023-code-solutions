@@ -3,4 +3,10 @@ button.language {
   background-color: lightgray;
 
   /* your code here 👇 */
+  margin-left: 12px;
+  margin-right: 16px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border-style: none;
+  box-sizing: border-box;
 }
