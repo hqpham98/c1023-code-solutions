@@ -8,3 +8,12 @@ button:hover {
   color: white;
   cursor: pointer;
 }
+
+th {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
