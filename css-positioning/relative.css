@@ -6,26 +6,27 @@
 
 .pokemon > img {
   width: 150px;
-
-  /* your code here */
+  right: 26rem;
+  position: relative;
 }
 
 #bulbasaur {
-  /* your code here */
+  top: 1rem;
 }
 
 #charmander {
-  /* your code here */
+  top: 2rem;
 }
 
 #squirtle {
-  /* your code here */
+  top: 4rem;
+  right: 26rem;
 }
 
 #pikachu {
-  /* your code here */
+  top: 6rem;
 }
 
 #jigglypuff {
-  /* your code here */
+  top: 14rem;
 }
