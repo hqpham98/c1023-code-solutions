@@ -1,0 +1,14 @@
+console.log('hello, world');
+let temp = document.querySelector('h1');
+console.log(temp);
+console.dir(temp);
+temp = document.querySelector('#explanation');
+console.log(temp);
+console.dir(temp);
+temp = document.querySelector('.hint');
+console.log(temp);
+console.dir(temp);
+temp = document.querySelectorAll('p');
+console.log(temp);
+temp = document.querySelectorAll('.example-link');
+console.log(temp);
