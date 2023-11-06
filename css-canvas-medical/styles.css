@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+
+  /* border-style: solid;
+  border-width: 1px;
+  border-color: black; */
+}
+
+.header {
+  padding: 2rem 5%;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+#product-button,
+#implementation-button,
+#about-us-button,
+#blog-button {
+  border-style: none;
+  background-color: white;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+  color: #a0a0a0;
+}
+
+#contact-us-button {
+  background-color: #294363;
+  color: white;
+  border-radius: 8%;
+  border-style: none;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+}
+
+#header-button-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #e6e9ec;
+}
