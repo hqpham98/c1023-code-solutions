@@ -13,16 +13,20 @@ Static
 It doesn't
 
 - How does setting `position: relative` on an element affect where it appears on the page?
-  It does not affect it unless it is offset.
+
+It does not affect it unless it is offset.
 
 - How does setting `position: absolute` on an element affect document flow?
-  It is on a separate layer and affects document flow.
+
+It is on a separate layer and affects document flow.
 
 - How does setting `position: absolute` on an element affect where it appears on the page?
-  Positions the element relative to the containing element's sides instead of the normal document flow.
+
+Positions the element relative to the containing element's sides instead of the normal document flow.
 
 - How do you constrain an absolutely positioned element to a containing block?
-  If one of the element's ancestors is a fixed containing block.
+
+If one of the element's ancestors is a fixed containing block.
 
 - What are the four box offset properties?
 
