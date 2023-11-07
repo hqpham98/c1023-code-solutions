@@ -19,7 +19,15 @@ The textContent gets the text content of all elements, including <script> and <s
 - How do you update the text within an element using JavaScript?
   innerText or textContent
 
+```javascript
+const elem = document.querySelector('selector');
+elem.innerText = 'string'; //option a
+elem.textContent = 'string'; //option b
+```
+
 - Is the `event` parameter of an event listener callback always useful?
+
+Yes. To access properties regarding the event object such as .bubbles, .type, .target, etc.
 
 - Would this assignment be simpler or more complicated if we didn't use a variable to keep track of the number of clicks?
 
