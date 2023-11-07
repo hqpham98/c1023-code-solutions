@@ -7,7 +7,14 @@ body {
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
 }
@@ -17,11 +24,8 @@ body {
 }
 
 .modal {
-  position: sticky;
-  margin: auto;
+  position: absolute;
   padding: 1rem 2rem;
-  height: 10rem;
-  width: 30rem;
   text-align: center;
   z-index: 100;
   background-color: white;
