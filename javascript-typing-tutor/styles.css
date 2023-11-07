@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  border-bottom: 0.1rem solid white;
+}
+
+.current-char {
+  border-bottom: 0.1rem solid black;
+}
+
+.green {
+  color: #19cd1b;
+  border-bottom-color: #19cd1b;
+}
+
+.red {
+  color: #f80605;
+  border-bottom-color: #f80605;
+}
