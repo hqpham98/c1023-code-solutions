@@ -1,13 +1,39 @@
 * {
   box-sizing: border-box;
-
-  /* border-style: solid;
-  border-width: 1px;
-  border-color: black; */
 }
 
 .header {
-  padding: 2rem 5%;
+  padding: 1rem 5%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.banner-image-wrapper {
+  position: relative;
+  border-style: solid;
+  border-width: 1px;
+  border-color: red;
+
+  /* background-image: url("images/hero.jpg");
+  height: 900px;
+  width: 1600px; */
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
 }
 
 .row {
@@ -30,17 +56,17 @@
   background-color: white;
   margin-left: 2rem;
   margin-right: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #a0a0a0;
 }
 
 #contact-us-button {
   background-color: #294363;
   color: white;
-  border-radius: 8%;
+  border-radius: 0.4rem;
   border-style: none;
   padding: 0 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #header-button-row {
