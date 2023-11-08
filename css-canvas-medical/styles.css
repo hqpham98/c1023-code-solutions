@@ -4,23 +4,36 @@
 
 .header {
   padding: 1rem 5rem;
-  border-style: solid;
-  border-width: 1px;
-  border-color: black;
 }
 
 .divider {
-  width: 100%;
   height: 2px;
   background-color: #e6e9ec;
 }
 
-.banner {
+.banner-container {
   padding: 1rem 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('images/hero.jpg');
+}
+
+.banner {
+  position: relative;
+
+  /* background-image: url('images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: contain;
+  height: 800px; */
+}
+
+.banner-image {
+  width: 600px;
+}
+
+.absolute {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
 
 .filler {
@@ -30,6 +43,7 @@
 
 .row {
   display: flex;
+  flex-basis: 100%;
 }
 
 .column-half {
