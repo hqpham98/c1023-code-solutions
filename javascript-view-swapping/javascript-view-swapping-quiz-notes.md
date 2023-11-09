@@ -22,7 +22,11 @@ getAttribute()
 
 - At what steps of the solution would it be helpful to log things to the console?
 
+When interacting with Nodelists to ensure the proper elements are being accessed or modified.
+
 - If you were to add another tab and view to your HTML, but you didn't use event delegation, how would your JavaScript code be written instead?
+
+An event handler would be needed for every tab.
 
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your JavaScript code be written instead?
 
