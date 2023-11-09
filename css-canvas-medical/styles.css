@@ -23,10 +23,10 @@
   justify-content: center;
   max-height: 100%;
   max-width: 100%;
-  height: calc(500px - 1rem);
-  width: calc(16 / 9 * 500px - 5rem);
-  min-height: calc(500px - 1rem);
-  min-width: calc(16 / 9 * 500px - 5rem);
+  height: calc(600px - 1rem);
+  width: calc(16 / 9 * 600px - 5rem);
+  min-height: calc(600px - 1rem);
+  min-width: calc(16 / 9 * 600px - 5rem);
 }
 
 .banner > .banner-image {
