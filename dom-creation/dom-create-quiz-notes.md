@@ -23,11 +23,13 @@ Query the DOM for an element to append the new element to.
 element.appendChild(childElement)
 
 - What is the `textContent` property of an element object for?
-  textContent gets the text content of all elements including <script> and <style> elements, not just the visible text content.
+
+textContent gets the text content of all elements including <script> and <style> elements, not just the visible text content.
 
 - Name two ways to set the `class` attribute of a DOM element.
-  element.classList.add("class")
-  element.className = "class"
+
+element.classList.add("class")
+element.className = "class"
 
 - What are two advantages of defining a function to do create something (like the work of creating a DOM tree)?
 
