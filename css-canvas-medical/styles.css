@@ -12,28 +12,36 @@
 }
 
 .banner-container {
+  display: flex;
+  justify-content: center;
   padding: 1rem 5rem;
 }
 
-.banner {
+.banner-container > .banner {
   position: relative;
-
-  /* background-image: url('images/hero.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-origin: content-box;
-  background-size: contain;
-  height: 800px; */
+  display: flex;
+  justify-content: center;
+  max-height: 100%;
+  max-width: 100%;
+  height: calc(500px - 1rem);
+  width: calc(16 / 9 * 500px - 5rem);
+  min-height: calc(500px - 1rem);
+  min-width: calc(16 / 9 * 500px - 5rem);
 }
 
-.banner-image {
-  width: 600px;
-}
-
-.absolute {
+.banner > .banner-image {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
+.banner > .banner-header-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border: 1px solid black;
+  z-index: 100;
 }
 
 .filler {
