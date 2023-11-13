@@ -30,7 +30,7 @@ An event handler would be needed for every tab.
 
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your JavaScript code be written instead?
 
-A series of if statements checking each view/tab.
+A series of if-statements checking each view/tab.
 
 ## Notes
 
