@@ -14,7 +14,11 @@ getItem()
 
 - What data type can `localStorage` save in the browser?
 
+A Storage object
+
 - When does the `'beforeunload'` event fire on the `window` object?
+
+It's fired when the current window, contained document, and associated resources are about to be unloaded. The main use case for this event is to trigger a browser-generated confirmation dialog that asks users to conffirm if they really want to leave the page when they try to close or reload it, or navigate somewhere else.
 
 ## Notes
 
