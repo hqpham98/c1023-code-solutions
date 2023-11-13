@@ -135,6 +135,28 @@
 .address-container {
   background-color: #525351;
   color: white;
+  padding: 4rem;
+  font-family: Avenir, sans-serif;
+  text-transform: capitalize;
+}
+
+.address-container > .row > :nth-child(2) {
+  line-height: 2;
+}
+
+.footer {
+  background-color: #fafafa;
+  display: flex;
+  color: #6e6e6e;
+  font-size: 1.2rem;
+  padding: 2rem 4rem;
+}
+
+.footer button {
+  border-style: none;
+  background-color: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 .row {
