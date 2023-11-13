@@ -6,7 +6,11 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - Give two examples of media features that you can query in an `@media` rule.
 
+min-width, orientation
+
 - Which HTML meta tag is used in mobile-responsive web pages?
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 ## Notes
 
