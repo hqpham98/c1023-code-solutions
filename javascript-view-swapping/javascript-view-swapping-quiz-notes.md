@@ -14,7 +14,7 @@ Hiding it.
 
 - What does the `element.matches()` method take as an argument and what does it return?
 
-A strng containing valid CSS selectors. Returns true if the Element matches the selector, otherwise false.
+A string containing valid CSS selectors. Returns true if the Element matches the selector, otherwise false.
 
 - How can you retrieve the value of an element's attribute?
 
