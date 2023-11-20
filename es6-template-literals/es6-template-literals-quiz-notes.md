@@ -6,7 +6,11 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - What is the syntax for writing a template literal?
 
+`${variable}`
+
 - What is "string interpolation"?
+
+Substituting part of a string for the values of variables or expressions.
 
 ## Notes
 
