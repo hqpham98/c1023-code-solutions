@@ -10,7 +10,7 @@ Create an instance of a user-defined object type or one of the built-in object t
 
 - What property of JavaScript functions can store shared behavior for instances created with `new`?
 
-prototype property
+Prototype property for the constructor function.
 
 - What does the `instanceof` operator do?
 
