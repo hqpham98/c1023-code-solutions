@@ -14,5 +14,4 @@ xhr.addEventListener('load', function () {
   }
 });
 
-console.log(xhr);
 xhr.send();
