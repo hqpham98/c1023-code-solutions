@@ -6,13 +6,19 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - What are unit tests?
 
+A test that ensures that a specific function returns the expected result for a "happy path" and any potential edge cases.
+
 - Why is it important to write unit tests?
 
 To make sure functions work independently.
 
 - What code should be tested with a unit test? What code is not well suited for unit tests?
 
+Blocks of code that can be tested independently. Code that relies on external functionality such as pulling from a database.
+
 - What is Jest? What are some other popular JavaScript unit testing frameworks?
+
+Jest is a JavaScript unit testing framework.
 
 ## Notes
 

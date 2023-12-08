@@ -9,7 +9,7 @@ export function evenNumbers(numbers: number[]): number[] {
  * Returns a number formatted in dollars and cents.
  */
 export function toDollars(amount: number): string {
-  return `$${amount}.00`;
+  return `$${amount.toFixed(2)}`;
 }
 
 /**
@@ -21,7 +21,6 @@ export function divideBy(numbers: number[], divisor: number): number[] {
   for (let i = 0; i < numbers.length; i++) {
     result.push(numbers[i] / divisor);
   }
-  console.log('result:', result);
   return result;
 }
 
@@ -39,6 +38,5 @@ export function multiplyBy(
       ? (obj[key] = value * multiplier)
       : (obj[key] = value);
   });
-  console.log('obj', obj);
   return obj;
 }

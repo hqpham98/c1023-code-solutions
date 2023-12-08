@@ -19,6 +19,11 @@ describe('toDollars', () => {
     const result = toDollars(number);
     expect(result).toEqual('$123.00');
   });
+  it('rounds trailing cents', () => {
+    const number = 101.4999;
+    const result = toDollars(number);
+    expect(result).toEqual('$101.50');
+  });
 });
 
 describe('divideBy', () => {
@@ -35,7 +40,7 @@ describe('divideBy', () => {
 });
 
 describe('multiplyBy', () => {
-  it('multiply by 2', () => {
+  it('multiplies by 2', () => {
     const obj: Record<string, unknown> = { a: '2', b: 'b', c: 3, d: 'd', e: 5 };
     const result = multiplyBy(obj, 2);
     expect(result).toEqual({ a: '2', b: 'b', c: 6, d: 'd', e: 10 });
