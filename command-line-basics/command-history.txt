@@ -1,0 +1,500 @@
+   81  git add .
+   82  git commit -m " asdasdasd" --no-verify
+   83  git push origin main
+   84   git pull origin main
+   85  git add main.js 
+   86  git commit -m "test"
+   87  git add .
+   88  git commit  -m "poop" --no-verify
+   89  git push origin main
+   90  git branch practice-interview-problem
+   91  git switch practice-interview-problem 
+   92  git switch main
+   93  git status
+   94  git status
+   95  git branch practice-interview-problem
+   96  git switch practice-interview-problem 
+   97  git status
+   98  git status
+   99  git add practice-interview-challenge/
+  100  git add practice-interview-challenge/
+  101  git commit -m "Completed exercise"
+  102  git push origin practice-interview-problem 
+  103  git add practice-interview-challenge/
+  104  git commit -m "remove comment"
+  105  git add practice-interview-challenge/
+  106  git commit -m "completed"
+  107  git s tatus
+  108  git status
+  109  git branch -M practice-interview-challenge
+  110  git push origin practice-interview-challenge 
+  111  git add practice-interview-challenge/index.html 
+  112  git commit -m "add script tag"
+  113  git push origin practice-interview-challenge 
+  114  git status
+  115  git switch main
+  116  git switch css-responsive-layout 
+  117  git status
+  118  git add css-responsive-layout/
+  119  git commit -m "Corrected media query"
+  120  git push origin css-responsive-layout 
+  121  git switch main
+  122  git pull origin main
+  123  git switch css-transitions 
+  124  git switch main
+  125  git switch css-transitions 
+  126  git status
+  127  git add css-transitions/
+  128  git commit -m "quiz"
+  129  git switch main
+  130  git branch es6-template-literals
+  131  git switch es6-template-literals 
+  132  git status
+  133  git add es6-template-literals/
+  134  git commit -m "initial commit"
+  135  git switch mian
+  136  git switch main
+  137  git branch javascript-timers
+  138  git switch javascript-timers 
+  139  git add javascript-timers/
+  140  git commit -m "Completed exercise"
+  141  git push origin javascript-timers
+  142  git status
+  143  git switch es6-template-literals 
+  144  git add es6-template-literals/
+  145  git commit -m "Completed exercise"
+  146  git push origin es6-template-literals 
+  147  git status
+  148  git switch main
+  149  git pull origin main
+  150  git branch javascript-carousel
+  151  git switch javascript-carousel 
+  152  git status
+  153  git add javascript-carousel/
+  154  git commit -m "initial commit"
+  155  git add javascript-carousel/
+  156  git commit -m "Completed exercise"
+  157  git add javascript-carousel/
+  158  git commit -m "Completed exercise"
+  159  git push origin javascript-carousel 
+  160  git add javascript-carousel/
+  161  git commit -m "Completed exercise"
+  162  git switch main
+  163  git branch http-messages
+  164  git switch http-messages 
+  165  git status
+  166  git add http-messages/
+  167  clear
+  168  get https://example.com
+  169  http httpsL//example.com
+  170  http https://example.com
+  171  clear
+  172  http https://example.com
+  173  http get https://example.com
+  174  clear
+  175  http get https://example.com
+  176  http get https://example.com --verbose
+  177  git add 
+  178  git status
+  179  git add .
+  180  git status
+  181  git commit -m "completed exercise"
+  182  git push origin http-messages 
+  183  git switch main
+  184  git branch http-messages
+  185  git switch javascript-new
+  186  git branch javascript-new
+  187  git switch javascript-new 
+  188  git status
+  189  git status
+  190  git add javascript-new/
+  191  git status
+  192  git commit -m "initial commit"
+  193  git add 
+  194  git add .
+  195  git commit -m "Completed exercise"
+  196  git push origin javascript-new 
+  197  git add javascript-new/
+  198  git commit -m "completed quiz"
+  199  git push origin javascript-new
+  200   git status
+  201  git switch main
+  202  git switch http-messages 
+  203  git status
+  204  clear
+  205  http https://example.com
+  206  clear
+  207  http get  https://example.com
+  208  http get https://example.com --verbose
+  209  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  210  http --body GET https://example.com > http-messages/index.html
+  211  git add http-messages/
+  212  git commit  -m "Completed exercise"
+  213  git push origin http-messages 
+  214  git status
+  215  git switch main
+  216  git status
+  217  git switch css-trans
+  218  git switch css-transitions 
+  219  git  add css-transitions/
+  220  git status
+  221  git commit -m "Completed exercise"
+  222  git push origin css-transitions 
+  223  git switch main
+  224  git status
+  225  git status
+  226  git switch users-can-edit-an-entry 
+  227  git status
+  228  git add 
+  229  git add .
+  230  git commit -m "Implemented pull request changes #3"
+  231  git push origin  users-can-edit-an-entry 
+  232  git status
+  233  git switch main
+  234  git branch object-manipulation-3
+  235  git switch object-manipulation-
+  236  git switch object-manipulation-3
+  237  git status
+  238  git add object-manipulation-3/
+  239  git commit -m "test"
+  240  git commit -m "test" --no-verify
+  241  git status
+  242  git switch mai
+  243  git switch main
+  244  git branch es6-classes
+  245  git switch es6-classes 
+  246  git add .
+  247  git commit  -m "Completed exercise"
+  248  git add .
+  249  git commit  -m "Completed exercise"
+  250  git push origin es6-classes 
+  251  git switch main
+  252  git pull origin main
+  253  git pull origin main
+  254  git add .
+  255  git commit -m "Test"
+  256  git push origin main
+  257  git branch users-can-delete-an-entry
+  258  git switch users-can-delete-an-entry 
+  259  git add .
+  260  git commit -m "Added Delete Entry button #4"
+  261  git add .
+  262  git commit -m "Added  modal #4"
+  263  git push origin  users-can-delete-an-entry 
+  264  git status
+  265  git switch main
+  266  git switch users-can-delete-an-entry 
+  267  git branch javascript-ajax
+  268  git switch javascript-a
+  269  git switch javascript-ajax 
+  270  git switch main
+  271  git status
+  272  git switch javascript-ajax
+  273  git status
+  274  git add javascript-ajax/
+  275  git commit -m "exercise completed"
+  276  git add javascript-ajax/
+  277  git commit -m "remove a console log"
+  278  git push origin javascript-ajax
+  279  git switch main
+  280  git pull origin main
+  281  git status
+  282  git add .
+  283  git commit -m "Added and styled modal #4"
+  284  git commit -m "Added and styled modal #4" --no-verify
+  285  git push origin users-can-delete-an-entry 
+  286  git add js/
+  287  git commit -m "Added delete functionality #4"
+  288  git commit -m "Added delete functionality #4" --no-verify
+  289  git push origin users-can-delete-an-entry 
+  290  git add js/
+  291  git commit -m "Completed delete functionality #4"
+  292  git add js/
+  293  git commit -m "Removed console logs #4"
+  294  git push origin users-can-delete-an-entry 
+  295  git switch main
+  296  git branch es6-destructuring
+  297  git switch es6
+  298  git switch es6-
+  299  git switch es6-destructuring 
+  300  git add es6-destructuring/
+  301  git commit -m "Completed exercise"
+  302  git push es6-destructuring/
+  303  git push origin es6-destructuring 
+  304  git switch main
+  305  git pull origin main
+  306  git switch es6-destructuring 
+  307  git switch main
+  308  git branch es6-arrow-functions
+  309  git status
+  310  git switch main
+  311  git switch es6-arrow-functions 
+  312  git add .
+  313  git commit -m "Completed exercise"
+  314  ls
+  315  cd ,,
+  316  cd ..
+  317  cd es6-arrow-functions/
+  318  ls
+  319  git status
+  320  git add .
+  321  git commit -m "Completed exercise"
+  322  git push origin es6-arrow-functions 
+  323  git switch main
+  324  git status
+  325  cd ..
+  326  git pull origin main
+  327  git pull origin main
+  328  git branch array-methods
+  329  git switch array-methods 
+  330  git add array-methods/
+  331  git commit -m "Completed exercise"
+  332  git push origin  array-methods 
+  333  git switch main
+  334  git pull origin main
+  335  git status
+  336  git branch es6-operators
+  337  git switch es6-operators
+  338  git add .
+  339  git add .
+  340  git commit -m "Completed exercise"
+  341  git push origin es6-operators 
+  342  git switch main
+  343  git status
+  344  git pull origin main
+  345  git branch objects-revisted
+  346  git branch object-revisted -delete
+  347  git branch object-revisted --delete
+  348  git branch objects-revisted --delete
+  349  git branch objects-revisited
+  350  git switch objects-revisited 
+  351  git add .
+  352  git commit -m "Completed exercise"
+  353  git push origin objects-revisited 
+  354  git switch main
+  355  npm install typescript --save-dev
+  356  npm install
+  357  git pull origin main
+  358  git status
+  359  git add
+  360  git add .
+  361  git commit -m "npm changes"
+  362  git push origin main
+  363  git status
+  364  git branch npm-intro
+  365  git switch npm-intro 
+  366  cd npm-intro/
+  367  ls
+  368  cp .npm-init.js ~/.npm-init.js
+  369  npm init --yes
+  370  npm install jquery
+  371  npm install eslint --save-dev
+  372  npm run hello
+  373  cd ..
+  374  git add npm-intro/
+  375  git commit -m "Completed exercise"
+  376  git push origin npm-intro 
+  377  git switch main
+  378  git branch typescript-intro
+  379  git switch typescript-intro 
+  380  git status
+  381  git add typescript-intro/
+  382  git switch npm-intro 
+  383  git switch typescript-intro 
+  384  git add 
+  385  git status
+  386  git commit -m "initial commit"
+  387  git switch npm-intro 
+  388  git switch typescript-intro 
+  389  git status
+  390  git push origin typescript-intro 
+  391  git add typescript-intro/
+  392  git commit -m "Completed exercise"
+  393  git push origin typescript-intro 
+  394  git switch npm-intro 
+  395  git switch typescript-intro 
+  396  git switch main
+  397  git branch typescript-primitives-and-variables
+  398  git switch typescript-primitives-and-variables 
+  399  cd typescript-primitives-and-variables/
+  400  npx tsc --watch main.ts
+  401  git status
+  402  git add typescript-primitives-and-variables/
+  403  git commit -m "Completed exercise"
+  404  git push origin typescript-primitives-and-variables 
+  405  git switch main
+  406  git branch typescript-operators-and-expressions
+  407  git switch typescript-operators-and-expressions
+  408  git status
+  409  git add typescript-operators-and-expressions/
+  410  cd typescript-operators-and-expressions/
+  411  npx tsc --watch main.ts
+  412  git status
+  413  git add typescript-operators-and-expressions/
+  414  git status
+  415  git commit -m "Completed exercise"
+  416  git push origin typescript-operators-and-expressions 
+  417  git switch mai
+  418  git switch main
+  419  git status
+  420  git pull origin  main
+  421  git  pull origin main
+  422  git  pull origin main
+  423  git status
+  424  git branch typescript-objects
+  425  git switch typescript-objects 
+  426  cd typescript-objects/
+  427  npx tsc --watch main.ts
+  428  git add typescript-objects/
+  429  git add typescript-objects/
+  430  git commit -m "Completed exercise"
+  431  git push origin typescript-objects 
+  432  git switch main
+  433  git branch typescript-functions
+  434  git switch typescript-functions 
+  435  cd typescript-functions/
+  436  npx tsc --watch main.ts
+  437  git add typescript-functions/
+  438  git commit -m "Completed exercise"
+  439  git push origin typescript-functions 
+  440  git switch main
+  441  git branch unit-tests-jest
+  442  git switch unit-tests-jest 
+  443  npm install
+  444  npm install jest
+  445  git add 
+  446  git add .
+  447  git switch main
+  448  git switch unit-tests-jest 
+  449  git add .
+  450  git commit -m "test"
+  451  git switch main
+  452  git branch --delete unit-tests-jest 
+  453  git branch -D unit-tests-jest
+  454  git branch unit-tests-jest
+  455  git switch unit-tests-jest 
+  456  cd unit-tests-jest/
+  457  npm install jest
+  458  npm audit fix
+  459  npm install jest
+  460  git switch main
+  461  git switch unit-tests-jest 
+  462  git add
+  463  git add .
+  464  git commit -m "test"
+  465  git commit -m "test" --no-verify
+  466  git switch main
+  467  git branch -D unit-tests-jest 
+  468  git status
+  469  cd ..
+  470  git status
+  471  git status
+  472  git branch unit-tests-jest
+  473  git switch unit-tests-jest 
+  474  git status
+  475  git add unit-tests-jest/
+  476  cd unit-tests-jest/
+  477  npm install jest
+  478  npm test
+  479  npm test
+  480  npm test
+  481  git add .
+  482  git commit -m "Completed exercise"
+  483  git push origin unit-tests-jest 
+  484  git status
+  485  git add  unit-tests-jest-quiz-notes.md 
+  486  npm test
+  487  npm test
+  488  git add numbers.t
+  489  git add .
+  490  git commit -m  "Completed exercise"
+  491  git push origin unit-tests-jest 
+  492  npm test
+  493  git status
+  494  git push  origin  unit-tests-jest 
+  495  git switch main
+  496  cd ..
+  497  git status
+  498  git switch unit-tests-jest 
+  499  git status
+  500  git switch main
+  501  git status
+  502  git branch command-line-basics
+  503  git switch command-line-basics 
+  504  cd command-line-basics/
+  505  man  man
+  506  man cat
+  507  cat laziness.txt
+  508  cat laziness.txt
+  509  cat laziness.txt hubris.txt
+  510  cat  laziness.next
+  511  cat  laziness.txt
+  512  cat hubris.txt
+  513  cat impatience.txt
+  514  cat laziness.txt impatience.txt hubris.txt
+  515  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  516  cat three-virtues.txt 
+  517  man ls
+  518  ls
+  519  ls -a
+  520  ls -a -F
+  521  man ls
+  522  ls lfz-staff/
+  523  ls lfz-staff/ -a -F
+  524  ls -aF lfz-staff > lfz-staff/contents.txt
+  525  cat lfz-staff/contents.txt 
+  526  man pwd
+  527  pwd
+  528  pwd > i-was-here.txt
+  529  ls
+  530  ls  -af
+  531  ls -af
+  532  ls -aF
+  533  cat i-was-here.txt 
+  534  man  echo
+  535  echo   "Hello, World!" > hello.txt
+  536  ls
+  537  cat hello.txt 
+  538  man touch
+  539  man  touch
+  540  touch tag-youre-it.txt
+  541  touch snoop/boop.txt
+  542  ls
+  543  touch snoot/boop.txt
+  544  ls snoot/
+  545  man mkdir
+  546  man mkdir
+  547  mkdir parent
+  548  ls
+  549  mkdir -p parent/child
+  550  ls parent/
+  551  mkdir -p parent/child/grandchild
+  552  ls parent/
+  553  ls parent/child/
+  554  touch parent/child/grandchild/ .gitkeep
+  555* ls  -a parent/child/grandchild/.gitk
+  556  ls
+  557  touch parent/child/grandchild/.gitkeep
+  558  ls parent/child/grandchild/
+  559  ls parent/child/grandchild/ -a
+  560  man mv
+  561  rm .gitkeep
+  562  touch .gitkeep
+  563  mv pokiemans/ pokemon/
+  564  ls
+  565  man mv
+  566  man rm
+  567  man rm
+  568  rm lol.txt 
+  569  rm -r kill-me/
+  570  ls
+  571  man cp
+  572  man and-then.txt no-and-then.txt
+  573  cp and-then.txt no-and-then.txt
+  574  ls
+  575  cat and-then.txt 
+  576  cat no-and-then.txt 
+  577  man  history
+  578  man history
+  579  history
+  580  history > command-history.txt
