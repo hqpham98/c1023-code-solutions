@@ -1,1 +1,1 @@
-console.log('process.argv', process.argv);
+console.log('process.argv arguments:', ...process.argv.slice(2));
