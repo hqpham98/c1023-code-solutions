@@ -33,14 +33,17 @@ async function throwSeveral(): Promise<void> {
 
 async function throwChained(): Promise<void> {
   try {
-    console.log(elapsed(), 'throwChained1:', await read('foo-chain1', true));
-    console.log(elapsed(), 'throwChained2:', await read('foo-chain2', true));
-    console.log(elapsed(), 'throwChained3:', await read('foo-chain3', true));
+    const msg1 = await read('foo-chain1', true);
+    console.log(elapsed(), 'throwChained1:', msg1);
+    const msg2 = await read('msg1', true);
+    console.log(elapsed(), 'throwChained2:', msg2);
+    const msg3 = await read('msg2', true);
+    console.log(elapsed(), 'throwChained3:', msg3);
   } catch (error) {
     console.log(elapsed(), 'throwChained Error:', error);
   }
 }
 
-throwOnce();
-throwSeveral();
-throwChained();
+await throwOnce();
+await throwSeveral();
+await throwChained();

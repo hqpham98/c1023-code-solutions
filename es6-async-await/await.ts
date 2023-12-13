@@ -17,11 +17,14 @@ async function readSeveral(): Promise<void> {
 }
 
 async function readChained(): Promise<void> {
-  console.log(elapsed(), 'readChained1:', await read('foo-chain/bar.html'));
-  console.log(elapsed(), 'readChained2:', await read('foo-chain/bar.html'));
-  console.log(elapsed(), 'readChained3:', await read('foo-chain/bar.html'));
+  const msg1 = await read('foo-chain/bar.html');
+  console.log(elapsed(), 'readChained1:', msg1);
+  const msg2 = await read(msg1);
+  console.log(elapsed(), 'readChained2:', msg2);
+  const msg3 = await read(msg2);
+  console.log(elapsed(), 'readChained3:', msg3);
 }
 
-readOnce();
-readSeveral();
-readChained();
+await readOnce();
+await readSeveral();
+await readChained();
