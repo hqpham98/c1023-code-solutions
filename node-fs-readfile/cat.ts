@@ -6,13 +6,10 @@ async function read(): Promise<void> {
       console.log('Invalid arguments.');
       process.exit(1);
     }
-
-    let result: string = '';
-    for (let i = 2; i < process.argv.length; i++) {
-      result =
-        result + (await fs.readFile(process.argv[i], { encoding: 'utf8' }));
-    }
-    console.log(result);
+    const filenames = process.argv.slice(2);
+    const promises = filenames.map((path) => fs.readFile(path, 'utf8'));
+    const contents = Promise.all(promises);
+    console.log((await contents).join('\n\n'));
   } catch (e: unknown) {
     console.log(e);
   }
