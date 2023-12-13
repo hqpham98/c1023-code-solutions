@@ -1,0 +1,25 @@
+.container {
+  width: 600px;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-previous,
+.column-forward {
+  font-size: 2rem;
+}
+
+.progress i {
+  margin: 0 8px;
+}
+
+i:hover {
+  cursor: pointer;
+}
