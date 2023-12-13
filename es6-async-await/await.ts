@@ -1,0 +1,27 @@
+import { read } from './read.js';
+
+// Keep track of app load time so each log message can be timed.
+// Log messages should all be approximately 1 second apart.
+const startTime = Date.now();
+const elapsed = (): string =>
+  `${Math.round((Date.now() - startTime) / 1000)}s -`;
+
+async function readOnce(): Promise<void> {
+  console.log(elapsed(), 'readOnce:', await read('foo/bar.html'));
+}
+
+async function readSeveral(): Promise<void> {
+  console.log(elapsed(), 'readSeveral1:', await read('foo1/bar.html'));
+  console.log(elapsed(), 'readSeveral2:', await read('foo2/bar.html'));
+  console.log(elapsed(), 'readSeveral3:', await read('foo3/bar.html'));
+}
+
+async function readChained(): Promise<void> {
+  console.log(elapsed(), 'readChained1:', await read('foo-chain/bar.html'));
+  console.log(elapsed(), 'readChained2:', await read('foo-chain/bar.html'));
+  console.log(elapsed(), 'readChained3:', await read('foo-chain/bar.html'));
+}
+
+readOnce();
+readSeveral();
+readChained();
