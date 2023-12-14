@@ -1,6 +1,6 @@
 import * as fs from 'node:fs/promises';
 
-async function randNumber(): Promise<void> {
+async function noteSelf(): Promise<void> {
   if (process.argv.length < 3) {
     console.log('Invalid arguments');
     process.exit(1);
@@ -15,4 +15,4 @@ async function randNumber(): Promise<void> {
   }
 }
 
-await randNumber();
+await noteSelf();
