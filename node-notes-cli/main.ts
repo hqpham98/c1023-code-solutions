@@ -5,8 +5,8 @@ type Data = {
   notes: Record<string, string>;
 };
 
-const d = await fs.readFile('data.json', 'utf8');
-const data: Data = JSON.parse(d);
+let d: string;
+let data: Data;
 
 async function updateJSON(): Promise<void> {
   await fs.writeFile('data.json', JSON.stringify(data, null, 2), 'utf8');
@@ -41,6 +41,9 @@ async function updateNote(id: string, content: string): Promise<void> {
 }
 
 try {
+  d = await fs.readFile('data.json', 'utf8');
+  data = JSON.parse(d);
+
   if (process.argv.length < 3 || process.argv.length > 5) {
     throw Error('Invalid Arguments');
   }
@@ -54,7 +57,7 @@ try {
     readNote();
   } else if (process.argv.length === 4) {
     const arg = process.argv[3];
-    if (command === 'add') {
+    if (command === 'create') {
       addNote(arg);
     } else if (command === 'delete') {
       deleteNote(arg);

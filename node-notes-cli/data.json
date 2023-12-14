@@ -1,9 +1,11 @@
 {
-  "nextId": 38,
+  "nextId": 40,
   "notes": {
     "11": "The event loop is how a JavaScript runtime pushes asynchronous callbacks onto the stack once the stack is cleared.",
     "19": "Prototypal inheritance is how JavaScript objects delegate behavior.",
     "34": "A closure is formed when a function retains access to variables in its lexical scope.",
-    "37": "Hi Dan"
+    "37": "Hi Chris",
+    "38": "Hi Dan",
+    "39": "Hi Khanh"
   }
 }
