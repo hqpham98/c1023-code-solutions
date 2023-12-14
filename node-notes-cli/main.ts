@@ -38,7 +38,6 @@ async function updateNote(id: string, content: string): Promise<void> {
   } else {
     throw Error('ID not found');
   }
-  console.log('update tbd');
 }
 
 try {
