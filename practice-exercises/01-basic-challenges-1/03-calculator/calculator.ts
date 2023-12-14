@@ -3,5 +3,16 @@ export function calculator(
   num2: number,
   operator: string
 ): number {
-  return 0;
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;
+    default:
+      throw Error('Invalid operator');
+  }
 }
