@@ -6,21 +6,26 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - What method is available in the `node:fs` module for writing data to a file?
 
+writeFile()
+
 - Are file operations using the `fs` module synchronous or asynchronous?
+
+asynchronous
 
 ## Notes
 
 All student notes should be written here.
 
-
 How to write `Code Examples` in markdown
 
 for JS:
+
 ```javascript
-const data = "Howdy"
+const data = 'Howdy';
 ```
 
 for HTML:
+
 ```html
 <div>
   <p>This is text content</p>
@@ -28,8 +33,9 @@ for HTML:
 ```
 
 for CSS:
+
 ```css
 div {
-  width:100%
+  width: 100%;
 }
 ```
