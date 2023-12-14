@@ -6,34 +6,34 @@ type Data = {
 };
 
 const d = await fs.readFile('data.json', 'utf8');
-const Data = JSON.parse(d);
+const data: Data = JSON.parse(d);
 
 async function updateJSON(): Promise<void> {
-  await fs.writeFile('data.json', JSON.stringify(Data), 'utf8');
+  await fs.writeFile('data.json', JSON.stringify(data, null, 2), 'utf8');
 }
 
 function readNote(): void {
-  for (const note in Data.notes) {
-    console.log(`${note}: ${Data.notes[note]}`);
+  for (const note in data.notes) {
+    console.log(`${note}: ${data.notes[note]}`);
   }
 }
 
 async function addNote(note: string): Promise<void> {
-  Data.notes[Data.nextId.toString()] = note;
-  Data.nextId++;
+  data.notes[data.nextId.toString()] = note;
+  data.nextId++;
   updateJSON();
 }
 async function deleteNote(id: string): Promise<void> {
-  if (id in Data.notes) {
-    delete Data.notes[id];
+  if (id in data.notes) {
+    delete data.notes[id];
     updateJSON();
   } else {
     throw Error('ID not found');
   }
 }
 async function updateNote(id: string, content: string): Promise<void> {
-  if (id in Data.notes) {
-    Data.notes[id] = content;
+  if (id in data.notes) {
+    data.notes[id] = content;
     updateJSON();
   } else {
     throw Error('ID not found');
