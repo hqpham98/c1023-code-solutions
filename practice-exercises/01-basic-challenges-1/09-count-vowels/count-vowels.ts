@@ -1,3 +1,3 @@
 export function countVowels(str: string): number {
-  return 0;
+  return [...str.matchAll(/[aeiouAEIOU]/g)].length;
 }

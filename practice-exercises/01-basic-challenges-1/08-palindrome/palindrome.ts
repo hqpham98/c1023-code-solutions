@@ -1,10 +1,9 @@
 export function isPalindrome(str: string): boolean {
-  for (let i = 0; i < str.length && i !== str.length - 1 - i; i++) {
-    if (str[i].toLowerCase() !== str[str.length - 1 - i].toLowerCase()) {
+  const newStr = [...str.toLowerCase().matchAll(/[a-z]/g)].join('');
+  for (let i = 0; i < newStr.length && i !== newStr.length - 1 - i; i++) {
+    if (newStr[i] !== newStr[newStr.length - 1 - i]) {
       return false;
     }
   }
   return true;
 }
-
-console.log('isPalindrome', isPalindrome('racecar'));
