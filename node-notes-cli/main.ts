@@ -48,7 +48,7 @@ try {
     throw Error('Invalid Arguments');
   }
 
-  const command = process.argv[2];
+  const [, , command, arg1, arg2] = process.argv;
 
   if (process.argv.length === 3) {
     if (command !== 'read') {
@@ -56,19 +56,16 @@ try {
     }
     readNote();
   } else if (process.argv.length === 4) {
-    const arg = process.argv[3];
     if (command === 'create') {
-      addNote(arg);
+      addNote(arg1);
     } else if (command === 'delete') {
-      deleteNote(arg);
+      deleteNote(arg1);
     } else {
       throw Error('Invalid Arguments');
     }
   } else {
-    const arg = process.argv[3];
-    const arg2 = process.argv[4];
     if (command === 'update') {
-      updateNote(arg, arg2);
+      updateNote(arg1, arg2);
     } else {
       throw Error('Invalid Arguments');
     }
