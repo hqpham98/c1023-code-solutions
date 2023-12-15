@@ -25,7 +25,7 @@ app.get('/api/grades/', (req, res) => {
 app.post('/api/grades', (req, res, next) => {
   if (
     !(
-      typeof req.body === 'object' &&
+      Object.keys(req.body).length === 3 &&
       'name' in req.body &&
       'course' in req.body &&
       'score' in req.body &&
