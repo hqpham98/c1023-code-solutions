@@ -5,7 +5,6 @@ type Data = {
   notes: Record<string, string>;
 };
 
-let d: string;
 let data: Data;
 
 async function updateJSON(): Promise<void> {
@@ -41,7 +40,7 @@ async function updateNote(id: string, content: string): Promise<void> {
 }
 
 try {
-  d = await fs.readFile('data.json', 'utf8');
+  const d = await fs.readFile('data.json', 'utf8');
   data = JSON.parse(d);
 
   if (process.argv.length < 3 || process.argv.length > 5) {
