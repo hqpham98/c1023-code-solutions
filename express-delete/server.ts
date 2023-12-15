@@ -45,10 +45,6 @@ app.delete('/api/grades/:id', (req, res) => {
     return;
   }
   delete grades[+gradeID];
-  const gradesArray: Grade[] = [];
-  for (const g in grades) {
-    gradesArray.push(grades[g]);
-  }
   res.sendStatus(204);
 });
 
