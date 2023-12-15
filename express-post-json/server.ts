@@ -23,21 +23,22 @@ app.get('/api/grades/', (req, res) => {
 });
 
 app.post('/api/grades', (req, res, next) => {
-  // if (
-  //   !(
-  //     typeof req.body === 'object' &&
-  //     req.body.keys().length === 3 &&
-  //     'name' in req.body &&
-  //     'course' in req.body &&
-  //     'score' in req.body &&
-  //     typeof req.body.name === 'string' &&
-  //     typeof req.body.course === 'string' &&
-  //     typeof req.body.score === 'number'
-  //   )
-  // ) {
-  //   res.send('Invalid grade');
-  // }
-  const newGrade = { id: nextID, ...req.body };
+  if (
+    !(
+      typeof req.body === 'object' &&
+      'name' in req.body &&
+      'course' in req.body &&
+      'score' in req.body &&
+      !isNaN(Number(req.body.score))
+    )
+  ) {
+    res.status(404);
+    res.send('Invalid grade');
+    return;
+  }
+
+  const { name, course, score } = req.body;
+  const newGrade: Grade = { id: nextID, name, course, score };
   grades[nextID] = newGrade;
   res.status(201);
   res.send(grades[nextID++]);
