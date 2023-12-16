@@ -29,14 +29,14 @@ app.post('/api/grades', (req, res, next) => {
       'name' in req.body &&
       'course' in req.body &&
       'score' in req.body &&
-      !isNaN(Number(req.body.score))
+      typeof req.body.score === 'number'
     )
   ) {
     res.status(404);
     res.send('Invalid grade');
     return;
   }
-
+  console.log(typeof req.body.score);
   const { name, course, score } = req.body;
   const newGrade: Grade = { id: nextID, name, course, score };
   grades[nextID] = newGrade;
