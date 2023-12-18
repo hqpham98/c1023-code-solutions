@@ -15,7 +15,7 @@ async function getNotes(): Promise<Note> {
 
 async function read(req: Request, res: Response): Promise<void> {
   try {
-    const notes = getNotes();
+    const notes = await getNotes();
     res.json(notes);
   } catch (e) {
     console.log(e);
