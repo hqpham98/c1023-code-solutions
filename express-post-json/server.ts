@@ -22,6 +22,16 @@ app.get('/api/grades/', (req, res) => {
   res.json(gradesArray);
 });
 
+app.delete('/api/grades/:id', (req, res) => {
+  const gradeID = +req.params.id;
+  if (!(gradeID in grades)) {
+    res.sendStatus(404);
+    return;
+  }
+  delete grades[+gradeID];
+  res.sendStatus(204);
+});
+
 app.post('/api/grades', (req, res, next) => {
   if (
     !(
@@ -36,12 +46,10 @@ app.post('/api/grades', (req, res, next) => {
     res.send('Invalid grade');
     return;
   }
-  console.log(typeof req.body.score);
-  const { name, course, score } = req.body;
-  const newGrade: Grade = { id: nextID, name, course, score };
-  grades[nextID] = newGrade;
-  res.status(201);
-  res.send(grades[nextID++]);
+
+  const newGrade: Grade = { id: nextID, ...req.body };
+  grades[nextID++] = newGrade;
+  res.status(201).json(newGrade);
   next();
 });
 
