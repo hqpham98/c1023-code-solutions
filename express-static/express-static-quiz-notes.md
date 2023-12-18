@@ -10,7 +10,7 @@ It exposes a directory or a file to a particular URL so its contents can be publ
 
 - What does `express.static()` return?
 
-It returns the assets that you are attempting to access.
+A middleware function.
 
 - What are several examples of static files?
 
