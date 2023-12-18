@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import fs from 'fs/promises';
+import fs from 'node:fs/promises';
 
 const app = express();
 
@@ -8,15 +8,14 @@ type Note = {
   notes: Record<string, number>;
 };
 
-let notes: Note;
-
-async function updateNotes(): Promise<void> {
+async function getNotes(): Promise<Note> {
   const d = await fs.readFile('data.json', 'utf-8');
-  notes = JSON.parse(d);
+  return JSON.parse(d);
 }
 
 async function read(req: Request, res: Response): Promise<void> {
   try {
+    const notes = getNotes();
     res.json(notes);
   } catch (e) {
     console.log(e);
@@ -32,14 +31,14 @@ async function write(req: Request, res: Response): Promise<void> {
         typeof req.body.content === 'string'
       )
     ) {
-      res.status(404).send('Invalid arguments');
+      res.status(400).send('Invalid arguments');
       return;
     }
+    const notes = await getNotes();
     const newNote = { id: notes.nextId, ...req.body };
     notes.notes[notes.nextId] = newNote;
     notes.nextId++;
     await fs.writeFile('data.json', JSON.stringify(notes, null, 2), 'utf-8');
-    updateNotes();
     res.status(201).json(newNote);
   } catch (e) {
     console.log(e);
@@ -48,24 +47,19 @@ async function write(req: Request, res: Response): Promise<void> {
 
 async function deleteNote(req: Request, res: Response): Promise<void> {
   try {
+    const notes = await getNotes();
     if (!(req.params.id in notes.notes)) {
       res.status(404).send('Invalid ID');
       return;
     }
     delete notes.notes[req.params.id];
     await fs.writeFile('data.json', JSON.stringify(notes, null, 2), 'utf-8');
-    updateNotes();
     res.sendStatus(204);
   } catch (e) {
     console.log(e);
   }
 }
 
-try {
-  await updateNotes();
-} catch (e) {
-  console.log(e);
-}
 app.get('/api/notes/', read);
 app.use(express.json());
 app.post('/api/notes/', write);
