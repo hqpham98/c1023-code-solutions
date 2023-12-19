@@ -6,7 +6,11 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - What are some examples of aggregate functions?
 
+SUM() COUNT() MIN() MAX()
+
 - What is the purpose of a `group by` clause?
+
+To perform aggregate functions on certain groups of rows instead of the entire table.
 
 ## Notes
 
