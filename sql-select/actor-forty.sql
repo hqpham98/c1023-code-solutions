@@ -1,1 +1,1 @@
-select * from "actors" where "actorId" = '40';
+select * from "actors" where "actorId" = 40;
