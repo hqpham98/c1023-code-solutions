@@ -26,11 +26,11 @@ AS
 
 - How do you create a one-to-many relationship between two tables?
 
-A single join statement
+One table (i.e. Films with filmId) has a primary key that is used as a foreign key in another table (i.e. Actors with filmId).
 
 - How do you create a many-to-many relationship between two tables?
 
-Multiple join statements
+A join table that has a foreign key from one table (i.e. filmId from Films) and another table (i.e. actorID from Actors)
 
 ## Notes
 
