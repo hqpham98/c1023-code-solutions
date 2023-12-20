@@ -96,7 +96,7 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     const params = [name, course, score, gradeId];
     const result = await db.query(sql, params);
     if (!result.rows[0]) {
-      throw new ClientError(404, 'gradeId does not exist');
+      throw new ClientError(404, 'gradeId not found');
     }
     res.status(200).json(result.rows[0]);
   } catch (err) {
@@ -118,7 +118,7 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
     `;
     const result = await db.query(sql, [gradeId]);
     if (!result.rows[0]) {
-      throw new ClientError(404, 'gradeId does not exist');
+      throw new ClientError(404, 'gradeId not found');
     }
     res.status(204).json(result.rows[0]);
   } catch (err) {
