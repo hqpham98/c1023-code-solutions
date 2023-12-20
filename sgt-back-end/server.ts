@@ -1,7 +1,7 @@
 import pg from 'pg';
 import { ClientError } from './client-error.js';
 import express from 'express';
-import { errorMiddleware } from './error-middleware';
+import { errorMiddleware } from './error-middleware.js';
 
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
@@ -46,7 +46,7 @@ app.get('/api/grades/', async (req, res, next) => {
       from "grades"
     `;
     const result = await db.query(sql);
-    res.send(result.rows);
+    res.status(200).send(result.rows);
   } catch (err) {
     next(err);
   }
@@ -54,6 +54,16 @@ app.get('/api/grades/', async (req, res, next) => {
 
 app.post('/api/grades/', async (req, res, next) => {
   try {
+    if (
+      !(
+        Object.keys(req.body).length === 3 &&
+        'name' in req.body &&
+        'course' in req.body &&
+        'score' in req.body
+      )
+    ) {
+      throw new ClientError(400, 'Invalid arguments');
+    }
     const sql = `
       INSERT INTO "grades" ("name", "course", "score")
       VALUES ($1, $2, $3)
@@ -71,6 +81,9 @@ app.post('/api/grades/', async (req, res, next) => {
 app.put('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const gradeId = Number(req.params.gradeId);
+    if (!Number.isInteger(gradeId) || gradeId <= 0) {
+      throw new ClientError(400, 'Invalid gradeId');
+    }
     const sql = `
       UPDATE "grades"
       SET "name" = $1,
@@ -82,6 +95,9 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
     const { name, course, score } = req.body;
     const params = [name, course, score, gradeId];
     const result = await db.query(sql, params);
+    if (!result.rows[0]) {
+      throw new ClientError(404, 'gradeId does not exist');
+    }
     res.status(200).json(result.rows[0]);
   } catch (err) {
     next(err);
@@ -91,14 +107,20 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
 app.delete('/api/grades/:gradeId', async (req, res, next) => {
   try {
     const gradeId = Number(req.params.gradeId);
+    if (!Number.isInteger(gradeId) || gradeId <= 0) {
+      throw new ClientError(400, 'Invalid gradeId');
+    }
+
     const sql = `
       DELETE
       FROM "grades"
-      WHERE "gradeId" = $1
-      RETURNING *;
+      WHERE "gradeId" = $1;
     `;
     const result = await db.query(sql, [gradeId]);
-    res.status(201).json(result.rows[0]);
+    if (!result.rows[0]) {
+      throw new ClientError(404, 'gradeId does not exist');
+    }
+    res.status(204).json(result.rows[0]);
   } catch (err) {
     next(err);
   }
