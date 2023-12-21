@@ -1,7 +1,3 @@
 export function CustomButton() {
-  return (
-    <>
-      <button>Click Me!</button>
-    </>
-  );
+  return <button>Click Me!</button>;
 }
