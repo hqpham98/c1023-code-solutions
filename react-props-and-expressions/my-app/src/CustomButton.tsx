@@ -5,13 +5,11 @@ type Props = {
 
 export function CustomButton({ text, color }: Props) {
   return (
-    <>
-      <button
-        style={{
-          backgroundColor: color,
-        }}>
-        {text}
-      </button>
-    </>
+    <button
+      style={{
+        backgroundColor: color,
+      }}>
+      {text}
+    </button>
   );
 }
