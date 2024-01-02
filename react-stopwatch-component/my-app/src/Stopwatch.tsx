@@ -3,10 +3,6 @@ import { FaPlay } from 'react-icons/fa';
 import { FaPause } from 'react-icons/fa';
 import './Stopwatch.css';
 
-export function Foo() {
-  return <FaPlay />;
-}
-
 export function Stopwatch() {
   const [count, setCount] = useState(0);
   const [play, setPlay] = useState(false);
