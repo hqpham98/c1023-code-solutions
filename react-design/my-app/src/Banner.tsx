@@ -1,3 +1,3 @@
-export function Banner({ items }: Record<string, string[]>) {
-  return <p>Aardvark</p>;
+export function Banner({ item }: Record<string, string>) {
+  return <p>{item}</p>;
 }

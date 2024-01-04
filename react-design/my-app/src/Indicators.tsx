@@ -1,4 +1,4 @@
-export function Indicators({ items }: Record<string, string[]>) {
+export function Indicators({ count }: Record<string, number>) {
   return (
     <>
       <button>0</button>

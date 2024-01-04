@@ -1,4 +1,4 @@
-export function NextButton({ items }: Record<string, string[]>) {
+export function NextButton({ index }: Record<string, number>) {
   return (
     <div>
       <button>Next</button>

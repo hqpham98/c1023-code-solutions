@@ -1,4 +1,4 @@
-export function PrevButton({ items }: Record<string, string[]>) {
+export function PrevButton({ index }: Record<string, number>) {
   return (
     <div>
       <button>Prev</button>
