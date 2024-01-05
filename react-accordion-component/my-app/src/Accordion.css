@@ -1,0 +1,16 @@
+.topic-container {
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.topic-title {
+  border: 1px solid black;
+}
+
+.topic-content {
+  border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
