@@ -12,6 +12,7 @@ export function Accordion({ list }: Record<string, Topic[]>) {
 
   const results = list.map((t) => (
     <TopicCard
+      key={t.id}
       topic={t}
       selectedID={selectedID}
       onClick={() => setSelectedID(t.id)}
