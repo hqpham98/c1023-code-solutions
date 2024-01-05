@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
