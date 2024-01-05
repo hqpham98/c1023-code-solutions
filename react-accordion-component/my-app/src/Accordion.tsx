@@ -15,7 +15,7 @@ export function Accordion({ list }: Record<string, Topic[]>) {
       key={t.id}
       topic={t}
       selectedID={selectedID}
-      onClick={() => setSelectedID(t.id)}
+      onClick={() => setSelectedID(t.id === selectedID ? 0 : t.id)}
     />
   ));
   return <>{results}</>;
