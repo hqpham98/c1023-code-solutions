@@ -22,8 +22,8 @@ export function List() {
           setIsLoading(false);
         }
       } catch (e) {
-        console.log(e);
         setError(e);
+      } finally {
         setIsLoading(false);
       }
     }
