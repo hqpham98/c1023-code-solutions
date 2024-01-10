@@ -1,0 +1,13 @@
+img {
+  height: 500px;
+  width: 500px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.button-wrapper {
+  cursor: pointer;
+}
