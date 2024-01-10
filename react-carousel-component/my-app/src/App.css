@@ -5,6 +5,7 @@ img {
 
 .row {
   display: flex;
+  justify-content: center;
 }
 
 .button-wrapper {
