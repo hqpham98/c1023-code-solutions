@@ -19,7 +19,25 @@ export function Users() {
   const [user, setUser] = useState<User>();
 
   /* your code here (hint: useEffect) */
-
+  useEffect(() => {
+    async function getUsers() {
+      try {
+        const res: Response = await fetch(
+          'https://jsonplaceholder.typicode.com/users'
+        );
+        if (res.ok) {
+          setUsers(await res.json());
+        } else {
+          setError(Error(`Response Status: ${res.status}`));
+        }
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    getUsers();
+  }, []);
   if (isLoading) {
     return <p>Loading...</p>;
   }
