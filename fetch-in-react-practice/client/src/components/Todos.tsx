@@ -19,13 +19,63 @@ export function Todos() {
   const [error, setError] = useState<unknown>();
 
   /* Implement useEffect to fetch all todos. Hints are at the bottom of the file. */
-  useEffect(() => {}, []);
+  useEffect(() => {
+    async function getTodos() {
+      try {
+        const res = await fetch('/api/todos');
+        if (!res.ok) {
+          throw Error(`Error, Response Code ${res.status}`);
+        }
+        setTodos(await res.json());
+      } catch (err) {
+        setError(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    getTodos();
+  }, []);
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
-  async function addTodo(newTodo: UnsavedTodo) {}
+  async function addTodo(newTodo: UnsavedTodo) {
+    try {
+      const res = await fetch('/api/todos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newTodo),
+      });
+      if (!res.ok) throw Error(`Error, Response Code: ${res.status}`);
+      setTodos(todos.concat([await res.json()]));
+    } catch (err) {
+      setError(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
-  async function toggleCompleted(todo: Todo) {}
+  async function toggleCompleted(todo: Todo) {
+    todo.isCompleted = !todo.isCompleted;
+    try {
+      const res = await fetch(`/api/todos/${todo.todoId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(todo),
+      });
+      if (!res.ok) throw Error(`Error, Response Code: ${res.status}`);
+      const modifiedTodos = todos.map((i) =>
+        i.todoId === todo.todoId ? todo : i
+      );
+      console.log(modifiedTodos);
+      setTodos(modifiedTodos);
+    } catch (err) {
+      setError(err);
+    }
+  }
 
   if (isLoading) {
     return <div>Loading...</div>;
