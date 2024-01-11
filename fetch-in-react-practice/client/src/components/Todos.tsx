@@ -70,7 +70,6 @@ export function Todos() {
       const modifiedTodos = todos.map((i) =>
         i.todoId === todo.todoId ? todo : i
       );
-      console.log(modifiedTodos);
       setTodos(modifiedTodos);
     } catch (err) {
       setError(err);
