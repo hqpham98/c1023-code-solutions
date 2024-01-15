@@ -12,8 +12,6 @@ const db = new pg.Pool({
 
 const app = express();
 
-app.listen(8080, () => console.log('Listening on port 8080'));
-
 app.use(express.json());
 
 app.get('/api/grades/:gradeId', async (req, res, next) => {
@@ -93,6 +91,9 @@ app.put('/api/grades/:gradeId', async (req, res, next) => {
       RETURNING *;
     `;
     const { name, course, score } = req.body;
+    if (!name) throw new ClientError(400, 'No name');
+    if (!course) throw new ClientError(400, 'No course');
+    if (!score) throw new ClientError(400, 'No score');
     const params = [name, course, score, gradeId];
     const result = await db.query(sql, params);
     if (!result.rows[0]) {
@@ -127,3 +128,4 @@ app.delete('/api/grades/:gradeId', async (req, res, next) => {
 });
 
 app.use(errorMiddleware);
+app.listen(8080, () => console.log('Listening on port 8080'));
