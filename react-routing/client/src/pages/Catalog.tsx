@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars -- Remove me */
 import { useEffect, useState } from 'react';
 import { fetchCatalog, type Product, toDollars } from '../lib';
+import { Link } from 'react-router-dom';
 import './Catalog.css';
 
 export function Catalog() {
@@ -52,14 +53,16 @@ type CardProps = {
 function ProductCard({ product }: CardProps) {
   const { productId, name, price, imageUrl, shortDescription } = product;
   return (
-    <div className="product text-dark card mb-4 shadow-sm text-decoration-none">
-      {/* TODO: Instead of a div, the above should link to `/details/:productId` */}
-      <img src={imageUrl} className="image card-img-top" alt={name} />
-      <div className="card-body">
-        <h5 className="card-title">{name}</h5>
-        <p className="card-text text-secondary">{toDollars(price)}</p>
-        <p className="description card-text">{shortDescription}</p>
+    <Link to={`/details/:${productId}`}>
+      <div className="product text-dark card mb-4 shadow-sm text-decoration-none">
+        {/* TODO: Instead of a div, the above should link to `/details/:productId` */}
+        <img src={imageUrl} className="image card-img-top" alt={name} />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text text-secondary">{toDollars(price)}</p>
+          <p className="description card-text">{shortDescription}</p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
