@@ -40,6 +40,15 @@ app.post('/api/auth/sign-up', async (req, res, next) => {
      *
      * Hint: Insert statements can include a `returning` clause to retrieve the insterted row(s).
      */
+
+    const hash = await argon2.hash(password);
+    const sql = `
+    INSERT INTO "users" ("username", "hashedPassword")
+    VALUES ($1, $2)
+    RETURNING *`;
+    const params = [username, hash];
+    const result = await db.query<Entry>(sql, params);
+    res.json(result.rows[0]);
   } catch (err) {
     next(err);
   }
