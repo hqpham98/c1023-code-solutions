@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { fetchProduct, type Product, toDollars } from '../lib';
 import './ProductDetails.css';
 
 export function ProductDetails() {
-  // TODO: Retrieve productId from the route
-  const productId = undefined;
+  const navigate = useNavigate();
+  const { productId } = useParams();
   const [product, setProduct] = useState<Product>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
@@ -42,10 +43,9 @@ export function ProductDetails() {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <div className="btn text-secondary">
-                {/* TODO: Instead of a div, the above should link to `/` */}
-                &lt; Back to catalog
-              </div>
+              <Link to="/">
+                <div className="btn text-secondary">&lt; Back to catalog</div>
+              </Link>
             </div>
           </div>
           <div className="row mb-4">
@@ -65,6 +65,12 @@ export function ProductDetails() {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => {
+          navigate('/');
+        }}>
+        Add to Cart
+      </button>
     </div>
   );
 }

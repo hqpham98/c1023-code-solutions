@@ -53,7 +53,7 @@ type CardProps = {
 function ProductCard({ product }: CardProps) {
   const { productId, name, price, imageUrl, shortDescription } = product;
   return (
-    <Link to={`/details/:${productId}`}>
+    <Link to={`/details/${productId}`}>
       <div className="product text-dark card mb-4 shadow-sm text-decoration-none">
         {/* TODO: Instead of a div, the above should link to `/details/:productId` */}
         <img src={imageUrl} className="image card-img-top" alt={name} />
