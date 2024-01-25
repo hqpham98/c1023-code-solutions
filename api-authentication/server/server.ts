@@ -78,6 +78,24 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
      *     (see `hashKey` above).
      *     Send the client a 200 response containing the payload and the token.
      */
+
+    const sql = `
+    SELECT "userId", "hashedPassword"
+    FROM "users"
+    WHERE "username" = $1`;
+    const params = [username];
+    const result = await db.query(sql, params);
+    const [user] = result.rows;
+    if (!user) {
+      throw new ClientError(401, 'invalid login');
+    }
+    const { userId, hashedPassword } = user;
+    if (!(await argon2.verify(hashedPassword, password))) {
+      throw new ClientError(401, 'invalid login');
+    }
+    const payload = { userId, username };
+    const token = jwt.sign(payload, hashKey);
+    res.json({ token, user: payload });
   } catch (err) {
     next(err);
   }
