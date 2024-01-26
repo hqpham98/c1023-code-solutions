@@ -86,7 +86,7 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
   }
 });
 
-app.get('/api/entries', async (req, res, next) => {
+app.get('/api/entries', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');
@@ -96,14 +96,14 @@ app.get('/api/entries', async (req, res, next) => {
         where "userId" = $1
         order by "entryId" desc;
     `;
-    const result = await db.query<User>(sql, [req.user?.userId]);
+    const result = await db.query<User>(sql, [req.user.userId]);
     res.status(201).json(result.rows);
   } catch (err) {
     next(err);
   }
 });
 
-app.post('/api/entries', async (req, res, next) => {
+app.post('/api/entries', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');
@@ -120,7 +120,7 @@ app.post('/api/entries', async (req, res, next) => {
         values ($1, $2, $3, $4)
         returning *;
     `;
-    const params = [req.user?.userId, title, notes, photoUrl];
+    const params = [req.user.userId, title, notes, photoUrl];
     const result = await db.query<Entry>(sql, params);
     const [entry] = result.rows;
     res.status(201).json(entry);
@@ -129,7 +129,7 @@ app.post('/api/entries', async (req, res, next) => {
   }
 });
 
-app.put('/api/entries/:entryId', async (req, res, next) => {
+app.put('/api/entries/:entryId', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');
@@ -150,7 +150,7 @@ app.put('/api/entries/:entryId', async (req, res, next) => {
         where "entryId" = $4 and "userId" = $5
         returning *;
     `;
-    const params = [title, notes, photoUrl, entryId, req.user?.userId];
+    const params = [title, notes, photoUrl, entryId, req.user.userId];
     const result = await db.query<Entry>(sql, params);
     const [entry] = result.rows;
     if (!entry) {
@@ -162,7 +162,7 @@ app.put('/api/entries/:entryId', async (req, res, next) => {
   }
 });
 
-app.delete('/api/entries/:entryId', async (req, res, next) => {
+app.delete('/api/entries/:entryId', authMiddleware, async (req, res, next) => {
   try {
     if (!req.user) {
       throw new ClientError(401, 'not logged in');
@@ -176,7 +176,7 @@ app.delete('/api/entries/:entryId', async (req, res, next) => {
         where "entryId" = $1 and "userId" = $2
         returning *;
     `;
-    const params = [entryId, req.user?.userId];
+    const params = [entryId, req.user.userId];
     const result = await db.query<Entry>(sql, params);
     const [deleted] = result.rows;
     if (!deleted) {
